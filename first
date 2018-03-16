@@ -1,0 +1,127 @@
+package First_project.Project;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.InvalidElementStateException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.*;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{	
+	static boolean check1;
+	static int adult = 4;
+	static int infant = 2;
+	static int x1=351;
+	static int y1=333;
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.goibibo.com/");
+		Thread.sleep(5000);
+		
+		/*//select a radio button
+		WebElement radioBtn = driver.findElement(By.id("gi_roundtrip_label"));
+		radioBtn.click();
+		
+		//select from a search list
+		WebElement element = driver.findElement(By.id("gosuggest_inputSrc"));
+		element.sendKeys("");
+		
+				
+		//---Travellers---
+		driver.findElement(By.id("pax_label")).click();
+		Thread.sleep(2000);
+		for (int i=2; i<=adult; i++){
+			driver.findElement(By.id("adultPaxPlus")).click();	
+		}
+		for (int i=1; i<=infant; i++){
+		driver.findElement(By.id("infantPaxPlus")).click();
+		}
+		
+		//----Class----
+		Thread.sleep(2000);
+		Select element1 = new Select(driver.findElement(By.id("gi_class")));
+		element1.selectByValue("F");
+		List <WebElement> elementCount = element1.getOptions();
+		int count = elementCount.size();
+		System.out.println("List of elements :");
+		for (int i=0; i < count; i++){	
+		System.out.println(elementCount.get(i).getText());
+		}
+		System.out.println("Total count:");
+		System.out.println(elementCount.size());
+		*/
+		
+		driver.findElement(By.id("gosuggest_inputSrc")).sendKeys("DEL");
+	
+
+
+		
+	/*	driver.findElement(By.id("get_sign_in")).click();
+		Thread.sleep(5000);	
+		
+		//switch to frame
+ 		driver.switchTo().frame("authiframe");
+		Thread.sleep(5000);
+		driver.findElement(By.id("authMobile")).sendKeys("8888893984");
+		Thread.sleep(5000);
+		driver.findElement(By.id("mobileSubmitBtn")).click();*/
+		
+		//```````````````````````````````````````````````````
+		
+		/*driver.get("https://www.hallwaze.com");
+		driver.findElement(By.className("input-trans")).sendKeys("smaheshwari2@xavient.com");
+		driver.findElement(By.className("btn-blue")).click();
+		driver.findElement(By.className("loginBtn")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.name("email")).sendKeys("smaheshwari2@xavient.com");
+	
+		check1 = driver.findElement(By.xpath(".//*[contains(@type,'submit')]")).isDisplayed();
+		//System.out.println(check1);
+		if (check1 == true )
+		{
+			System.out.println("1");
+			
+			//try and catch exception
+			try {
+				driver.findElement(By.xpath(".//*[contains(@type,'submit')]")).click();
+				}catch (InvalidElementStateException e){
+					System.out.println(e);
+				}finally{
+					driver.findElement(By.xpath(".//*[contains(@type,'password')]")).sendKeys("aaaa");
+				}
+			Thread.sleep(5000);
+			System.out.println("11");
+			driver.findElement(By.xpath(".//*[contains(@type,'password')]")).sendKeys("com");
+			System.out.println("2");
+		}
+		else
+		{
+			System.out.println("3");
+			driver.findElement(By.xpath(".//*[contains(@type,'password' AND @placeholder,'Password')]")).sendKeys("aaaa");
+			System.out.println("4");
+		}
+		System.out.println("5");
+		driver.findElement(By.xpath(".//*[contains(@type,'submit')]")).click();
+
+*/	
+
+}
+	private static char[] count(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	}
